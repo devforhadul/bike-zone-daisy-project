@@ -10,22 +10,393 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Poppins font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Font -->
     <style>
       .poppins-font {
         font-family: "Poppins", serif;
       }
     </style>
+    <!-- Tailwind theme -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "primary-color": "#E76F51",
+              "bg-primary-color": "rgba(231, 111, 81, 0.1)",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body class="poppins-font">
+  <body class="poppins-font mx-[15px]">
+    <header class="container mx-auto">
+      <!-- Navbar  -->
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>News</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <a class="font-bold text-2xl md:text-4xl">Bike Zone</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>News</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <a class="btn bg-primary-color text-white px-8 rounded-md">Login</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar finish -->
 
-    <h1>Hello World</h1>
-    <button class="btn">Button</button>
-    
+      <!-- Slider section -->
+      <div>
+        <div class="carousel w-full bg-bg-primary-color">
+          <div
+            id="slide1"
+            class="carousel-item relative w-full rounded-md py-14"
+          >
+            <div class="flex items-center justify-center">
+              <div class="space-y-3 flex-1">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">
+                  Ride-on R15 V4 <br />
+                  with Smile
+                </h1>
+                <p>
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim velit mollit.
+                </p>
+                <button class="btn btn-primary">Purchase</button>
+              </div>
+              <div class="flex-1">
+                <img src="images/slider/bike1.png" class="w-[482px]" />
+              </div>
+            </div>
+            <div
+              class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <div>
+              <img src="images/slider/bike2.png" class="w-full" />
+            </div>
+            <div
+              class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <div>
+              <img src="images/slider/bike3.png" class="w-full" />
+            </div>
+            <div
+              class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <div>
+              <img src="images/slider/bike4.png" class="w-full" />
+            </div>
+            <div
+              class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto">
+      <!-- feture bike section -->
+      <div class="py-20">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold mb-8 text-black">
+            Fetured Bikes In This Year
+          </h1>
+          <p>Best bike collection</p>
+        </div>
+        <div
+          class="flex md:flex-row flex-col gap-4 items-center justify-evenly"
+        >
+          <div>
+            <img src="images\others\feature-bike.png" alt="" />
+          </div>
+          <div>
+            <img src="images\others\feature-bike.png" alt="" />
+          </div>
+          <div>
+            <img class="" src="images\others\feature-bike.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- News section -->
+      <div class="py-20">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold mb-8 text-black">Latest News</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card glass">
+            <figure class="p-5">
+              <img src="images\others\latest1.png" alt="car!" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Ducati XDIAVEL S-73</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <div class="card-actions justify-start">
+                <a class="btn bg-primary-color text-white px-8 rounded-md"
+                  >Learn more</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card glass">
+            <figure class="p-5">
+              <img src="images\others\latest2.png" alt="car!" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Ducati XDIAVEL S-73</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <div class="card-actions justify-start">
+                <a class="btn bg-primary-color text-white px-8 rounded-md"
+                  >Learn more</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card glass">
+            <figure class="p-5">
+              <img src="images\others\latest3.png" alt="car!" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Ducati XDIAVEL S-73</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus,
+                fermentum amet faucibus sed id nisi lectus at.
+              </p>
+              <div class="card-actions justify-start">
+                <a
+                  class="btn bg-primary-color hover:bg-bg-primary-color text-white px-8 rounded-md"
+                  >Learn more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cient section -->
+      <div class="py-20">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold mb-8 text-black">
+            Happy <span class="">Clients says</span>
+          </h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center">
+          <!-- rating 1 -->
+          <div
+            class="card bg-base-100 w-96 border-2 rounded-none border-[#DEDEDE] pt-12 pb-4 items-center justify-center"
+          >
+            <div class="avatar mx-auto">
+              <div class="w-32 rounded-full">
+                <img src="images\others\user-1.png" />
+              </div>
+            </div>
+            <div class="card-body items-center text-center space-y-2">
+              <p class="w-[250px]">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <!-- Rating -->
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked="checked"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+
+              <p class="text-blue-600">Regina Miles</p>
+              <p class="text-gray-900 font-semibold">Banker</p>
+            </div>
+          </div>
+          <!-- rating 2 -->
+          <div
+            class="card bg-base-100 w-96 border-2 rounded-none border-[#DEDEDE] pt-12 pb-4 items-center justify-center"
+          >
+            <div class="avatar mx-auto">
+              <div class="w-32 rounded-full">
+                <img src="images\others\user-2.png" />
+              </div>
+            </div>
+            <div class="card-body items-center text-center space-y-2">
+              <p class="w-[250px]">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <!-- Rating -->
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked="checked"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+
+              <p class="text-blue-600">Regina Miles</p>
+              <p class="text-gray-900 font-semibold">Banker</p>
+            </div>
+          </div>
+          <!-- rating 3 -->
+          <div
+            class="card bg-base-100 w-96 border-2 rounded-none border-[#DEDEDE] pt-12 pb-4 items-center justify-center"
+          >
+            <div class="avatar mx-auto">
+              <div class="w-32 rounded-full">
+                <img src="images\others\user-3.png" />
+              </div>
+            </div>
+            <div class="card-body items-center text-center space-y-2">
+              <p class="w-[250px]">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+              <!-- Rating -->
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                  checked="checked"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="mask mask-star-2 bg-orange-400"
+                />
+              </div>
+
+              <p class="text-blue-600">Regina Miles</p>
+              <p class="text-gray-900 font-semibold">Banker</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>
